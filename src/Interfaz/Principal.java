@@ -31,6 +31,9 @@ public class Principal extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         TxtSueldo = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        TxtHijos = new javax.swing.JTextField();
+        cmdConsultar = new javax.swing.JToggleButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,6 +47,17 @@ public class Principal extends javax.swing.JFrame {
         jLabel2.setText("Ingrese Sueldo ");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, -1, -1));
         jPanel1.add(TxtSueldo, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 130, -1));
+
+        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel3.setText("Cuantos Hijos tiene ");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, -1, -1));
+        jPanel1.add(TxtHijos, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 100, 30, -1));
+
+        cmdConsultar.setBackground(new java.awt.Color(0, 0, 0));
+        cmdConsultar.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
+        cmdConsultar.setForeground(new java.awt.Color(255, 255, 255));
+        cmdConsultar.setText("Consultar Bonificación");
+        jPanel1.add(cmdConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -95,9 +109,12 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtHijos;
     private javax.swing.JTextField TxtSueldo;
+    private javax.swing.JToggleButton cmdConsultar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

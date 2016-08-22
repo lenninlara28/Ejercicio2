@@ -34,6 +34,10 @@ public class Principal extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         TxtHijos = new javax.swing.JTextField();
         cmdConsultar = new javax.swing.JToggleButton();
+        jLabel4 = new javax.swing.JLabel();
+        TxtBonificacion = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        TxtMonto = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,7 +61,26 @@ public class Principal extends javax.swing.JFrame {
         cmdConsultar.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         cmdConsultar.setForeground(new java.awt.Color(255, 255, 255));
         cmdConsultar.setText("Consultar Bonificación");
+        cmdConsultar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdConsultarActionPerformed(evt);
+            }
+        });
         jPanel1.add(cmdConsultar, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 150, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel4.setText("Usted Tiene Un Monto De Bonificación De:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
+
+        TxtBonificacion.setEditable(false);
+        jPanel1.add(TxtBonificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 210, 130, -1));
+
+        jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel5.setText("Su Monto Total Es:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 130, -1));
+
+        TxtMonto.setEditable(false);
+        jPanel1.add(TxtMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 130, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,11 +90,27 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void cmdConsultarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdConsultarActionPerformed
+        String monto,montob;
+        int sueldo,hijos;
+        sueldo=Integer.parseInt(TxtSueldo.getText());
+        hijos=Integer.parseInt(TxtHijos.getText());
+        int bonificacion= 80000*hijos;
+        int salarioT=sueldo+bonificacion;    
+      
+     montob=String.valueOf(bonificacion);
+     TxtBonificacion.setText(montob);
+     
+     monto=String.valueOf(salarioT);
+     TxtMonto.setText(monto);
+     
+    }//GEN-LAST:event_cmdConsultarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -109,12 +148,16 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtBonificacion;
     private javax.swing.JTextField TxtHijos;
+    private javax.swing.JTextField TxtMonto;
     private javax.swing.JTextField TxtSueldo;
     private javax.swing.JToggleButton cmdConsultar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

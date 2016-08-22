@@ -107,7 +107,9 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel1.add(TxtMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 130, -1));
 
+        cmdNuevo.setBackground(new java.awt.Color(0, 0, 0));
         cmdNuevo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cmdNuevo.setForeground(new java.awt.Color(255, 255, 255));
         cmdNuevo.setText("Nueva Consulta");
         cmdNuevo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

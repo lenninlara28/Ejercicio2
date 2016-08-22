@@ -40,6 +40,7 @@ public class Principal extends javax.swing.JFrame {
         TxtBonificacion = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         TxtMonto = new javax.swing.JTextField();
+        cmdNuevo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -106,6 +107,15 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel1.add(TxtMonto, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 130, -1));
 
+        cmdNuevo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        cmdNuevo.setText("Nueva Consulta");
+        cmdNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cmdNuevoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(cmdNuevo, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -114,7 +124,9 @@ public class Principal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 331, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -173,6 +185,15 @@ public class Principal extends javax.swing.JFrame {
               evt.consume();}
     }//GEN-LAST:event_TxtHijosKeyTyped
 
+    private void cmdNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmdNuevoActionPerformed
+       TxtHijos.setText("");
+     TxtMonto.setText("");
+     TxtSueldo.setText("");
+     TxtBonificacion.setText("");
+     
+     TxtSueldo.requestFocusInWindow();
+    }//GEN-LAST:event_cmdNuevoActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -214,6 +235,7 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JTextField TxtMonto;
     private javax.swing.JTextField TxtSueldo;
     private javax.swing.JToggleButton cmdConsultar;
+    private javax.swing.JButton cmdNuevo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
